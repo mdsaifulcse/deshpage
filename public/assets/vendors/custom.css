@@ -1,0 +1,17 @@
+
+.kt-svg-icon{
+    color:#e17315;
+}
+.form-footer{
+    background-color:rgb(141 142 149 / 8%);
+}
+.form-header{
+    background-color:#39d98040;
+}
+
+.modal-footer{
+    display:block !important;
+}
+.mce-notification-inner,.mce-notification.mce-has-close, .mce-flow-layout-item.mce-last{
+    display:none !important;
+}

@@ -55,10 +55,10 @@
                                                 @endif
                                                 <br>
                                                 <i class="fa fa fa-clock-o text-danger"></i>
-                                                প্রকাশিত:
+                                                Published:
                                                     <?php $bongabda = new EasyBanglaDate\Types\BnDateTime($news->published_date);
 
-                                                    echo  $bongabda->getDateTime()->format('h:i a, l jS F Y ');
+                                                    echo  $bongabda->getDateTime()->enFormat('h:i a, l jS F Y ');
                                                     ?>
 
                                                 </span>
@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="marginBottom20 hidden-print">
-                        <h2 class="McatTitle"><span class="eee"> {{\App\Models\Setting::first()->value('company_name')}} সর্বশেষ </span></h2>
+                        <h2 class="McatTitle"><span class="eee"> {{\App\Models\Setting::first()->value('company_name')}} Latest Upload </span></h2>
                         <div class="row">
                             @forelse($latestNews as $latest)
                                 <?php
@@ -202,7 +202,7 @@
                                 </div>
                             </div>
                                 @empty
-                                <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                <h4 class="text-danger text-center">No Record Found !</h4>
                             @endforelse
                         </div>
                     </div>
@@ -213,7 +213,7 @@
                     </div>
 
                     <div class="marginBottom20 hidden-print">
-                        <h2 class="McatTitle"><span class="eee"> {{\App\Models\Setting::first()->value('company_name')}} জনপ্রিয় </span></h2>
+                        <h2 class="McatTitle"><span class="eee"> {{\App\Models\Setting::first()->value('company_name')}} Most Viewed </span></h2>
                         <div class="row">
                             @forelse($mostReadNews as $mostRead)
                                 <?php
@@ -246,7 +246,7 @@
                                     </div>
                                 </div>
                             @empty
-                                <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                <h4 class="text-danger text-center">No Record Found !</h4>
                             @endforelse
 
                         </div>
@@ -254,7 +254,7 @@
                 </div>
                 <aside class="col-xs-12 col-sm-12 col-md-4 aside hidden-print">
                     <div>
-                        <h2 class="McatTitle"><span class="eee"> সর্বশেষ - {{$news->newsCategory->category_name}}</span></h2>
+                        <h2 class="McatTitle"><span class="eee"> Latest - {{$news->newsCategory->category_name}}</span></h2>
                         <div class="single-block">
                             <div class="details with-icon">
 
@@ -284,7 +284,7 @@
                                 </div>
 
                                     @empty
-                                    <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                    <h4 class="text-danger text-center">No Record Found !</h4>
                                 @endforelse
                             </div>
                         </div>
@@ -307,7 +307,7 @@
                     @endforelse
 
                     <div>
-                        <h2 class="McatTitle"><span class="eee"> সর্বোচ্চ পঠিত - {{$news->newsCategory->category_name}} </span>
+                        <h2 class="McatTitle"><span class="eee"> Most Read - {{$news->newsCategory->category_name}} </span>
                         </h2>
                         <div class="details-thumb">
                             @forelse($categoryMostReadNews->take(1) as $readNews)

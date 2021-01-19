@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-7">
                     <p class="small">
-                        <span> <br>&copy; {{\MyHelper::bn_number($setting->copyright)}} সর্বস্বত্ব সংরক্ষিত | {{\App\Models\Setting::first()->value('company_name')}}</span><br>
+                        <span> <br>&copy; {{\MyHelper::bn_number($setting->copyright)}} All Right Reserved | {{\App\Models\Setting::first()->value('company_name')}}</span><br>
                         <i class="fa fa-map-marker"></i> {{$setting->address1}}
                         <br>
                         <abbr title="Phone:"><i class="fa fa-phone"></i> </abbr> {{$setting->mobile_no1}} ,
@@ -24,9 +24,9 @@
                 </div>
                 <div class="col-sm-5 footer-top hidden-print">
                     <ul class="footer-menu text-right">
-                        <li class="paddingBottom10"><a href="{{url('/about-us.html')}}">আমাদের কথা</a></li>
-                        <li class="paddingBottom10"><a href="{{url('/contact.htm')}}">যোগাযোগ </a></li>
-                        <li class="paddingBottom10"><a href="{{url('/page/privacy-policy')}}" target="_blank">প্রাইভেসি পলিসি</a></li>
+                        <li class="paddingBottom10"><a href="{{url('/about-us.html')}}">About Us</a></li>
+                        <li class="paddingBottom10"><a href="{{url('/contact.htm')}}">Contact us </a></li>
+                        <li class="paddingBottom10"><a href="{{url('/page/privacy-policy')}}" target="_blank">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

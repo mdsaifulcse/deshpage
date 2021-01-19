@@ -16,7 +16,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="text-center padding20 no-margin">
-                                <h2 class="no-margin"> সব খবর</h2>
+                                <h2 class="no-margin"> All Ads</h2>
                             </div>
                         </div>
                     </div>
@@ -26,18 +26,18 @@
                                 <div class="col-sm-5">
                                     <div class="input-group">
 
-                                        <div class="input-group-addon">তারিখ <i class="fa fa-calendar"></i></div>
+                                        <div class="input-group-addon">Date <i class="fa fa-calendar"></i></div>
                                         <input type="text" name="dateFrom" class="form-control" id="dateFrom"
                                                value="@if(isset($request->dateFrom)) {{$request->dateFrom}} @endif">
 
-                                        <div class="input-group-addon">থেকে <i class="fa fa-calendar"></i></div>
+                                        <div class="input-group-addon">To <i class="fa fa-calendar"></i></div>
                                         <input type="text" name="dateTo" class="form-control" id="dateTo"
                                         value="@if(isset($request->dateTo)) {{$request->dateTo}} @endif">
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
 
-                                    {!! Form::select('category_id',$categories,isset($request->category_id)?$request->category_id:[], ['id'=>'loadSubCategory','placeholder' => '-- ক্যাটাগরি --','class' => 'form-control','required'=>false]) !!}
+                                    {!! Form::select('category_id',$categories,isset($request->category_id)?$request->category_id:[], ['id'=>'loadSubCategory','placeholder' => '-- Category --','class' => 'form-control','required'=>false]) !!}
 
                                     @if ($errors->has('category_id'))
                                         <span class="help-block">
@@ -47,7 +47,7 @@
 
                                 </div>
                                 <div class="col-sm-4">
-                                    <input type="text" name="keyword" value="{{isset($request->keyword)?$request->keyword:''}}" class="form-control" id="text_search" placeholder="আপনি কী খুঁজছেন?">
+                                    <input type="text" name="keyword" value="{{isset($request->keyword)?$request->keyword:''}}" class="form-control" id="text_search" placeholder="What are you looking for?">
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 <div class="col-sm-2">
                                     <label for="division" class="sr-only">বিভাগ</label>
 
-                                    {!! Form::select('division_id',$states,isset($request->division_id)?$request->division_id:[], ['placeholder' => 'রাজ্য নির্বাচন','class' => 'form-control','required'=>false]) !!}
+                                    {!! Form::select('division_id',$states,isset($request->division_id)?$request->division_id:[], ['placeholder' => 'States','class' => 'form-control','required'=>false]) !!}
 
                                     @if ($errors->has('division_id'))
                                         <span class="help-block">
@@ -64,10 +64,10 @@
                                          </span>
                                     @endif
                                 </div>
-                                <div class="col-sm-2"><button type="submit" class="btn btn-primary btn-block">খুজুন </button></div>
+                                <div class="col-sm-2"><button type="submit" class="btn btn-primary btn-block">Search </button></div>
 
                                 <div class="col-sm-2">
-                                    <a href="{{url('/archive')}}" class="btn btn-danger btn-block">সব সংবাদ খুজুন</a>
+                                    <a href="{{url('/archive')}}" class="btn btn-danger btn-block">All Ads Search</a>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                         <small class="text-muted">
                                             <?php $bongabda = new EasyBanglaDate\Types\BnDateTime($news->published_date);
 
-                                            echo  $bongabda->getDateTime()->format('h:i a, l jS F Y ');
+                                            echo  $bongabda->getDateTime()->enFormat('h:i a, l jS F Y ');
                                             ?>
                                         </small>
                                     </div>

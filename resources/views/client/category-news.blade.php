@@ -116,12 +116,12 @@
                     @if($categoryNews->nextPageUrl()!='')
                             <div class="text-center paddingBottom20" >
                                 <button id="load_more_button" data-page="1" data-link="{{$categoryNews->nextPageUrl()}}">
-                                    আরও পড়ুন </button>
+                                    Read More </button>
                             </div>
                         @endif
 
                     @else
-                        <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                        <h4 class="text-danger text-center">No Record Found !</h4>
                     @endif
 
 
@@ -147,7 +147,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
                             <div>
-                                <h2 class="McatTitle"><span class="eee"> সর্বোচ্চ পঠিত - {{$categoryData->category_name}} </span></h2>
+                                <h2 class="McatTitle"><span class="eee"> Most read - {{$categoryData->category_name}} </span></h2>
 
                                 <div class="details-thumb">
                                     @forelse($categoryMostReadNews->take(1) as $readNews)
@@ -169,7 +169,7 @@
                                             </h4>
                                         </div>
                                     @empty
-                                        <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                        <h4 class="text-danger text-center">No Record Found !</h4>
                                     @endforelse
 
                                     <div class="sub-thumb">
@@ -195,7 +195,7 @@
                                                 </div>
 
                                             @empty
-                                                <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                                <h4 class="text-danger text-center">No Record Found !</h4>
                                             @endforelse
 
                                         </div>
@@ -214,14 +214,14 @@
 
                                 <ul class="nav nav-tabs nav-justified" role="tablist">
                                     <li role="presentation" class="active">
-                                        <a href="education.htm#tab21" aria-controls="tab21" role="tab" data-toggle="tab">সর্বশেষ</a></li>
-                                    <li role="presentation"><a href="education.htm#tab22" aria-controls="tab22" role="tab" data-toggle="tab">জনপ্রিয়</a></li>
+                                        <a href="education.htm#tab21" aria-controls="tab21" role="tab" data-toggle="tab">Latest Upload</a></li>
+                                    <li role="presentation"><a href="education.htm#tab22" aria-controls="tab22" role="tab" data-toggle="tab">Most View</a></li>
                                 </ul>
 
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane fade in active" id="tab21">
                                         <ul class="media-list">
-                                            @forelse($allLatestNews->skip(1)->take(4) as $key=>$latestNews)
+                                            @forelse($allLatestNews as $key=>$latestNews)
                                                 <?php
                                                 if (isset($latestNews->newsSubCategory))
                                                 {
@@ -233,7 +233,7 @@
                                                 <li class="media">
                                                     <div class="media-left">
                                                     <span>
-                                                        {{MyHelper::bn_number($key)}}
+                                                        {{$key+1}}
                                                     </span>
                                                         <a href="{{url($url)}}">
                                                             <img class="lazyload media-object" src="{{asset('/client')}}/media/common/placeholder-xs.png" data-src="{{asset($latestNews->feature_small)}}" alt="{{$latestNews->title}}">
@@ -244,10 +244,10 @@
                                                     </div>
                                                 </li>
                                             @empty
-                                                <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                                <h4 class="text-danger text-center">No Record Found !</h4>
                                             @endforelse
                                         </ul>
-                                        <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow">আজকের সর্বশেষ সবখবর</a></div>
+                                        <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow">Today Latest Ads</a></div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="tab22">
                                         <ul class="media-list">
@@ -263,7 +263,7 @@
                                             <li class="media">
                                                 <div class="media-left">
                                                     <span>
-                                                        {{MyHelper::bn_number($key)}}
+                                                        {{$key+1}}
                                                     </span>
                                                     <a href="{{url($url)}}">
                                                         <img class="lazyload media-object" src="{{asset('/client')}}/media/common/placeholder-xs.png" data-src="{{asset($data->feature_small)}}" alt="{{$data->title}}">
@@ -274,11 +274,11 @@
                                                 </div>
                                             </li>
                                             @empty
-                                                <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                                <h4 class="text-danger text-center">No Record Found !</h4>
                                             @endforelse
 
                                         </ul>
-                                        <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow"> আজকের সর্বশেষ সবখবর</a></div>
+                                        <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow">Today Latest Ads</a></div>
                                     </div>
                                 </div>
                             </div>

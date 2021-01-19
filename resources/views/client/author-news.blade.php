@@ -77,7 +77,7 @@
                                     <small class="text-muted"><i class="fa fa fa-clock-o"></i>
                                         <?php $bongabda = new EasyBanglaDate\Types\BnDateTime($news->published_date);
 
-                                        echo  $bongabda->getDateTime()->format('h:i a, l jS F Y ');
+                                        echo  $bongabda->getDateTime()->enFormat('h:i a, l jS F Y ');
                                         ?>
                                     </small>
 
@@ -97,15 +97,16 @@
                         </div>
 
                         @empty
-                            <h3 class="alert alert-danger text-center">কোন তথ্য পাওয়া যায়নি!</h3>
+                            <h3 class="alert alert-danger text-center">No Record Found !</h3>
                         @endforelse
 
 
                     <div class="text-center paddingBottom20" style="display:none;">
-                        <button id="load_more_button"><img alt="Loader" src="https://cdn.jagonews24.com/media/common/ajax-loader.gif" class="animation_image" style="width: 30px; display: none;"> আরও পড়ুন</button>
+                        <button id="load_more_button"><img alt="Loader" src="https://cdn.jagonews24.com/media/common/ajax-loader.gif" class="animation_image" style="width: 30px; display: none;"> Read More</button>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 

@@ -193,7 +193,7 @@
                                         </span>
                                     </div>
                                     <div class="col-sm-4">
-                                        <a href="{{url($education->newsCategory->link)}}" class="right">সবখবর <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                        <a href="{{url($education->newsCategory->link)}}" class="right">All Ads <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </h2>
@@ -416,7 +416,7 @@
                                         </span>
                                         </div>
                                         <div class="col-sm-4">
-                                            <a href="{{url($entertainment->newsCategory->link)}}" class="right">সবখবর <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                            <a href="{{url($entertainment->newsCategory->link)}}" class="right">All Ads <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
                                 </h2>
@@ -512,7 +512,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="allnews"><a href="{{url($healthData->newsCategory->link)}}"> সবখবর</a></div>
+                        <div class="allnews"><a href="{{url($healthData->newsCategory->link)}}"> All Ads </a></div>
                     </div><!-- end col-sm-3 -->
 
                     @endif
@@ -561,7 +561,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="allnews"><a href="{{url($probashData->newsCategory->link)}}"> সবখবর</a></div>
+                        <div class="allnews"><a href="{{url($probashData->newsCategory->link)}}"> All Ads </a></div>
                     </div><!-- end col-sm-3 -->
 
                     @endif
@@ -610,7 +610,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="allnews"><a href="{{url($literatureData->newsCategory->link)}}"> সবখবর</a></div>
+                        <div class="allnews"><a href="{{url($literatureData->newsCategory->link)}}"> All Ads </a></div>
                     </div><!-- end col-sm-3 -->
 
                     @endif
@@ -659,7 +659,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="allnews"><a href="{{url($interviewData->newsCategory->link)}}"> সবখবর</a></div>
+                        <div class="allnews"><a href="{{url($interviewData->newsCategory->link)}}"> All Ads </a></div>
                     </div><!-- end col-sm-3 -->
 
                     @endif

@@ -40,6 +40,23 @@ class LoginController extends Controller
 
 
 
+     public function showLoginForm() //customer login form -----
+    {
+        return view('auth.metroniclogin',['url' => '']);
+    }
+
+    public function showStaffLoginForm()
+    {
+        return view('auth.metroniclogin', ['url' => '/staff']);
+    }
+
+    public function showAdminLoginForm()
+    {
+        return view('auth.metroniclogin', ['url' => '/admin']);
+    }
+
+
+
     public function username()
     {
         $loginType = request()->input('mobile');

@@ -26,13 +26,11 @@ class HomeNewsController extends Controller
         //$newses=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED);
 
 
-        $coverNews=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
-            ->where(['is_cover_news'=>News::YES])
-            ->orderBy('id','DESC')->take(3)->get();
+        $coverNews=[];
 
         $homeNews=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where(['show_at_homepage'=>News::YES])
-            ->orderBy('id','DESC')->take(9)->get();
+            ->orderBy('id','DESC')->take(15)->get();
 
         $allLatestNews=$newses->orWhere(['is_cover_news'=>News::NO,'show_at_homepage'=>News::NO])->orderBy('id','DESC')->take(10)->get();
 

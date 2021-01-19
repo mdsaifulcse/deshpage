@@ -73,9 +73,13 @@
 
                 {{--<span>{{$_SERVER['HTTP_USER_AGENT']}}</span>--}}
 
-                {{--ftp: sangbad7.com--}}
-                {{--username: news7@sangbad7.com--}}
-                {{--Pass: [*xD*A5EK+&#--}}
+                {{--ftp: deshpage.com--}}
+                {{--username: desh@deshpage.com--}}
+                {{--Pass: LsW3!-3*yS}B--}}
+
+                {{--DB:ustutor1_deshpage_db--}}
+                {{--user:ustutor1_deshpage_user--}}
+                {{--pass: ~(OS*pB,n%@T--}}
 
             </div>
         </div>

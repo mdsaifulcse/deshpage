@@ -94,12 +94,12 @@
                 <div class="col-sm-5 text-center marginTop20 hidden-print">
                     <small class="date">
                         {{--<i class="fa fa-calendar"></i>--}}
-                        <i class="fa fa-map-marker"></i> <span>নিউ ইয়র্ক,</span>
-                        {{MyHelper::bn_date_time(date('l, d M Y'),strtotime(now()))}} |
+                        {{--<i class="fa fa-map-marker"></i> <span>নিউ ইয়র্ক,</span>--}}
+                        {{--{{MyHelper::bn_date_time(date('l, d M Y'),strtotime(now()))}} |--}}
 
                         {{--<span>Sangbad7</span> |--}}
 
-                         {{date('l, jS F Y ') }}
+                         {{--{{date('l, jS F Y ') }}--}}
                     </small>
                 </div>
                 <div class="col-sm-4 text-right marginTop20 hidden-print">

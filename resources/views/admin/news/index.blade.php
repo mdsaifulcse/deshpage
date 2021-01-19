@@ -1,20 +1,20 @@
 @extends('layouts.vmsapp')
 
 @section('title')
-    News List
+    classified List
 @endsection
 
 
 <!-- begin:: Content Head -->
 
 @section('subheader')
-    News List
+    classified List
 @endsection
 
 @section('subheader-action')
     @can('news-create')
         <a href="{{ route('news.create') }}" class="btn btn-success pull-right">
-            <i class="la la-plus"></i> Create New News
+            <i class="la la-plus"></i> Create New classified
         </a>
 
     @endcan
@@ -42,9 +42,9 @@
                     <th>Topic</th>
                     <th>Category</th>
                     <th>Author</th>
-                    <th>News On</th>
+                    <th>classified On</th>
                     <th>Status</th>
-                    <th>More News</th>
+                    <th>More photo</th>
                     <th >Action</th>
 
                 </tr>

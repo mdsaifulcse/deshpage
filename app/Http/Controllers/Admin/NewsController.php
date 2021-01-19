@@ -37,11 +37,11 @@ class NewsController extends Controller
             ->addColumn('DT_RowIndex','')
             ->addColumn('news on','
                 @if($show_at_homepage=="Yes")
-                    <span class="btn btn-primary btn-xs">Home News </span>
+                    <span class="btn btn-primary btn-xs">Home Classified </span>
                     @endif
 
                @if($is_cover_news=="Yes")
-                <span class="btn btn-success btn-xs">Cover News </span>
+                <span class="btn btn-success btn-xs">Cover Classified </span>
                 @endif
                 ')
             ->addColumn('More News','

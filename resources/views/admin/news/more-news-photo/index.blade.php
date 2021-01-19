@@ -1,14 +1,14 @@
 @extends('layouts.vmsapp')
 
 @section('title')
-    News More Photo List
+    classified More Photo
 @endsection
 
 
 <!-- begin:: Content Head -->
 
 @section('subheader')
-     News More Photo for > {{$news->title}}
+    classified More Photo for > {{$news->title}}
 @endsection
 
 @section('subheader-action')
@@ -20,7 +20,7 @@
 
     @can('news-list')
         <a href="{{ route('news.index') }}" class="btn btn-success pull-right">
-            <i class="la la-angle-left"></i> Back to All News
+            <i class="la la-angle-left"></i> Back to All classified
         </a>
     @endcan
 @endsection
@@ -44,16 +44,16 @@
 
                         <input type="hidden" name="news_id" value="{{$news->id}}" >
                         <div class="modal-header">
-                            <h4 class="modal-title">Add More News Photo</h4>
+                            <h4 class="modal-title">Add More classified Photo</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                         </div>
                         <div class="modal-body">
 
                             <div class="form-group row {{ $errors->has('description') ? 'has-error' : '' }}">
-                                {{Form::label('News Details', 'News Details', array('class' => 'col-md-2 control-label'))}}
+                                {{Form::label('classified Details', 'classified Details', array('class' => 'col-md-2 control-label'))}}
                                 <div class="col-md-10">
                                     <div class="">
-                                        {!! Form::textArea('description', $value=old('description'), ['rows'=>8,'placeholder' => 'News Details Here ','class' => 'form-control textarea','required'=>false]) !!}
+                                        {!! Form::textArea('description', $value=old('description'), ['rows'=>8,'placeholder' => 'classified Details Here ','class' => 'form-control textarea','required'=>false]) !!}
 
 
                                         <strong class="text-default pull-right description-error"><span id="character_count">0</span> /5000 </strong>
@@ -156,10 +156,10 @@
                                             <div class="modal-body">
 
                                                 <div class="form-group row {{ $errors->has('description') ? 'has-error' : '' }}">
-                                                    {{Form::label('News Details', 'News Details', array('class' => 'col-md-2 control-label'))}}
+                                                    {{Form::label('classified Details', 'classified Details', array('class' => 'col-md-2 control-label'))}}
                                                     <div class="col-md-10">
                                                         <div class="">
-                                                            {!! Form::textArea('description', $value=old('description',$data->description), ['rows'=>8,'placeholder' => 'News Details Here ','class' => 'form-control textarea','required'=>false]) !!}
+                                                            {!! Form::textArea('description', $value=old('description',$data->description), ['rows'=>8,'placeholder' => 'classified Details Here ','class' => 'form-control textarea','required'=>false]) !!}
 
 
                                                             <strong class="text-default pull-right description-error"><span id="character_count">0</span> /5000 </strong>

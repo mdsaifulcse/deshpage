@@ -1,7 +1,7 @@
 @extends('layouts.vmsapp')
 
 @section('title')
-Create New News
+Create New Classified
 @endsection
 
 @section('style')
@@ -15,13 +15,13 @@ Create New News
 <!-- begin:: Content Head -->
 
 @section('subheader')
-	Create New News
+	Create New Classified
 @endsection
 
 @section('subheader-action')
     @can('news-list')
         <a href="{{ route('news.index') }}" class="btn btn-success pull-right">
-           Go News list
+           Go Classified list
         </a>
     @endcan
 @endsection
@@ -50,7 +50,7 @@ Create New News
 										<div class="kt-portlet__head form-header">
 											<div class="kt-portlet__head-label">
 												<h3 class="kt-portlet__head-title">
-													Create new News by fill up required field
+													Create new Classified by fill up required field
 												</h3>
 											</div>
 										</div>
@@ -62,7 +62,7 @@ Create New News
 													<div class="form-group col-md-7">
 														<label for="example-text-input" class="col-form-label">Title<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::text('title', $value=old('title'), array('placeholder' => 'News Title Here *','class' => 'form-control','required'=>true)) !!}
+															{!! Form::text('title', $value=old('title'), array('placeholder' => 'Classified Title Here *','class' => 'form-control','required'=>true)) !!}
 
 															@if ($errors->has('title'))
 																<span class="help-block">
@@ -75,7 +75,7 @@ Create New News
 													<div class="form-group col-md-3">
 														<label for="example-text-input" class="col-form-label">Topic<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::text('topic[]', $value=old('topic'), ['id'=>'topicField','placeholder' => 'News Topic Here *','class' => 'form-control','required'=>false,'style'=>'display:none',]) !!}
+															{!! Form::text('topic[]', $value=old('topic'), ['id'=>'topicField','placeholder' => 'Classified Topic Here *','class' => 'form-control','required'=>false,'style'=>'display:none',]) !!}
 
 															<ul id="topicFieldUl"></ul>
 
@@ -106,9 +106,9 @@ Create New News
 
 												<div class="row">
 													<div class="form-group col-md-10">
-														<label for="example-text-input" class="col-form-label">News Meta Details<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Meta Details<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::textArea('meta_description', $value=old('meta_description'), ['rows'=>3,'placeholder' => 'News Meta Details Here ','class' => 'form-control ','required'=>true]) !!}
+															{!! Form::textArea('meta_description', $value=old('meta_description'), ['rows'=>3,'placeholder' => 'Classified Meta Details Here ','class' => 'form-control ','required'=>true]) !!}
 
 
 															@if ($errors->has('meta_description'))
@@ -124,7 +124,7 @@ Create New News
 												</div><!-- end row -->
 												<div class="row">
 													<div class="form-group col-md-10">
-														<label for="example-text-input" class="col-form-label">News Details<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Details<sup class="text-danger">*</sup></label>
 														<div class="">
 															{!! Form::textArea('description', $value=old('description'), ['rows'=>8,'placeholder' => 'News Details Here ','class' => 'form-control textarea','required'=>false]) !!}
 
@@ -206,10 +206,10 @@ Create New News
 														</div>
 													</div>
 
-													<div class="form-group col-md-2">
-														<label for="example-text-input" class="col-form-label">Is Cover News?<sup class="text-danger">*</sup></label>
+													<div class="form-group col-md-2" style="display: none;">
+														<label for="example-text-input" class="col-form-label">Is Cover Classified?<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::select('is_cover_news', [\App\Models\News::YES=>\App\Models\News::YES,\App\Models\News::NO=>\App\Models\News::NO],[], ['placeholder' => 'Select One *','class' => 'form-control','required'=>true]) !!}
+															{!! Form::select('is_cover_news', [\App\Models\News::YES=>\App\Models\News::YES,\App\Models\News::NO=>\App\Models\News::NO],[], ['class' => 'form-control','required'=>true]) !!}
 
 															@if ($errors->has('is_cover_news'))
 																<span class="help-block">
@@ -225,7 +225,7 @@ Create New News
 												<div class="row">
 
 													<div class="form-group col-md-3">
-														<label for="example-text-input" class="col-form-label">News Author<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Author<sup class="text-danger">*</sup></label>
 														<div class="">
 															{!! Form::select('news_author_id',$newsAuthors,[], ['placeholder' => 'Select Author *','class' => 'form-control','required'=>true]) !!}
 
@@ -389,7 +389,7 @@ Create New News
                 singleFieldNode: $('#topicField'),
                 allowSpaces: true,
                 tagLimit:5,
-                placeholderText:'Enter News Topics (Max 3)',
+                placeholderText:'Enter Classified Topics (Max 3)',
             });
         });
 	</script>

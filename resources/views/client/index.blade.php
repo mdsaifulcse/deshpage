@@ -16,7 +16,6 @@
             <div class="row">
                 <div class="col-sm-8 main-content">
 
-
                     <div class="row">
                         @forelse($homeNews as $news)
 
@@ -53,11 +52,7 @@
 
                         @empty
 
-
-
                         @endforelse
-
-
                     </div>
 
                 </div>
@@ -83,14 +78,14 @@
 
                                     <ul class="nav nav-tabs nav-justified" role="tablist">
                                         <li role="presentation" class="active">
-                                            <a href="education.htm#tab21" aria-controls="tab21" role="tab" data-toggle="tab">সর্বশেষ</a></li>
-                                        <li role="presentation"><a href="education.htm#tab22" aria-controls="tab22" role="tab" data-toggle="tab">জনপ্রিয়</a></li>
+                                            <a href="education.htm#tab21" aria-controls="tab21" role="tab" data-toggle="tab">Latest Upload</a></li>
+                                        <li role="presentation"><a href="education.htm#tab22" aria-controls="tab22" role="tab" data-toggle="tab">Most Viewed</a></li>
                                     </ul>
 
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="tab21">
                                             <ul class="media-list">
-                                                @forelse($allLatestNews->skip(1)->take(4) as $key=>$latestNews)
+                                                @forelse($allLatestNews as $key=>$latestNews)
                                                     <?php
                                                     if (isset($latestNews->newsSubCategory))
                                                     {
@@ -102,7 +97,8 @@
                                                     <li class="media">
                                                         <div class="media-left">
                                                     <span>
-                                                        {{MyHelper::bn_number($key)}}
+                                                        {{--{{MyHelper::bn_number($key)}}--}}
+                                                        {{$key+1}}
                                                     </span>
                                                             <a href="{{url($url)}}">
                                                                 <img class="lazyload media-object" src="{{asset('/client')}}/media/common/placeholder-xs.png" data-src="{{asset($latestNews->feature_small)}}" alt="{{$latestNews->title}}">
@@ -113,14 +109,14 @@
                                                         </div>
                                                     </li>
                                                 @empty
-                                                    <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                                    <h4 class="text-danger text-center">No Record Found !</h4>
                                                 @endforelse
                                             </ul>
-                                            <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow">আজকের সর্বশেষ সবখবর</a></div>
+                                            <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow">All Ads</a></div>
                                         </div>
                                         <div role="tabpanel" class="tab-pane" id="tab22">
                                             <ul class="media-list">
-                                                @forelse($mostReadNews->skip(1)->take(4) as $key=>$data)
+                                                @forelse($mostReadNews as $key=>$data)
                                                     <?php
                                                     if (isset($data->newsSubCategory))
                                                     {
@@ -132,7 +128,7 @@
                                                     <li class="media">
                                                         <div class="media-left">
                                                     <span>
-                                                        {{MyHelper::bn_number($key)}}
+                                                        {{$key+1}}
                                                     </span>
                                                             <a href="{{url($url)}}">
                                                                 <img class="lazyload media-object" src="{{asset('/client')}}/media/common/placeholder-xs.png" data-src="{{asset($data->feature_small)}}" alt="{{$data->title}}">
@@ -143,11 +139,11 @@
                                                         </div>
                                                     </li>
                                                 @empty
-                                                    <h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>
+                                                    <h4 class="text-danger text-center">No Record Found !</h4>
                                                 @endforelse
 
                                             </ul>
-                                            <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow"> আজকের সর্বশেষ সবখবর</a></div>
+                                            <div class="allnews"><a href="{{url('/archive')}}" rel="nofollow"> All Ads</a></div>
                                         </div>
                                     </div>
                                 </div>

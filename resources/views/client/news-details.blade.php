@@ -48,11 +48,11 @@
 
                                                     <div class="media-body">
                                                 <span class="small text-muted time-with-author">
-                                                <i class="fa fa-pencil"></i>
-                                                @if(isset($news->newsAuthor))
-                                                <a class="hidden-print" href="{{url('/author/'.$news->newsAuthor->id)}}" style="display:inline-block;" rel="nofollow">{{$news->newsAuthor->profile->designation}} </a>
+                                                {{--<i class="fa fa-pencil"></i>--}}
+                                                {{--@if(isset($news->newsAuthor))--}}
+                                                {{--<a class="hidden-print" href="{{url('/author/'.$news->newsAuthor->id)}}" style="display:inline-block;" rel="nofollow">{{$news->newsAuthor->profile->designation}} </a>--}}
 
-                                                @endif
+                                                {{--@endif--}}
                                                 <br>
                                                 <i class="fa fa fa-clock-o text-danger"></i>
                                                 Published:

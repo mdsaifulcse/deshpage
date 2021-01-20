@@ -16,7 +16,7 @@ class DivisionController extends Controller
      */
     public function index(Request $request)
     {
-        $allData=Division::orderBy('id','DESC')->paginate(20);
+        $allData=Division::orderBy('division','ASC')->get();
         $max_serial=Division::max('serial_num');
 
         return view('admin.divisions.index',compact('allData','max_serial'));
@@ -58,7 +58,7 @@ class DivisionController extends Controller
 
         $validator = Validator::make($input, [
             'division' => 'required',
-            'link' => 'required|unique:divisions',
+            'link' => 'required|unique:divisions,link,NULL,id,deleted_at,NULL',
 
         ]);
         if ($validator->fails()) {
@@ -124,7 +124,7 @@ class DivisionController extends Controller
         $validator = Validator::make($input, [
             'division' => 'required',
             'serial_num' => 'required',
-            'link' => "required|unique:divisions,link,$id",
+            'link' => "required|unique:divisions,link,$id,id,deleted_at,NULL",
         ]);
         if ($validator->fails()) {
             return redirect()->back()->with('error','Duplicate or empty record found.');

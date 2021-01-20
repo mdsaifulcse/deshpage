@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="text-center">
-                            <h2 class="no-margin"> আমাদের কথা </h2>
+                            <h2 class="no-margin"> About us </h2>
                         </div>
                     </div>
                 </div>

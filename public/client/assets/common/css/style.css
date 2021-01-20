@@ -95,7 +95,7 @@ body,h1,h2,h3,h4,h5,h6,p,textarea{font-family:SolaimanLipi;}
 .jagoTab2,
 .video-gallery{display:block!important;}
 .subLead i.fa{display:inline-block!important;}
-#menu{background: #ac0f0a;border-bottom: 2px solid #000000;box-shadow:0 0 5px 0 black;width:100%;}
+#menu{background: #0d5dab;border-bottom: 2px solid #000000;box-shadow:0 0 5px 0 black;width:100%;}
 #menu a{color:#fff;font-size:20px;padding-left:10px;padding-right:10px;}
 #menu .mega-dropdown{position:static;}
 #menu .mega-dropdown-menu{background:#fff;padding:30px;border-bottom:1px solid #f1f1f1;}
@@ -895,18 +895,18 @@ input[type="search"].sb-search-input{-webkit-appearance:none;-webkit-border-radi
 .sb-search-input:-ms-input-placeholder{color:#9a1515;}
 .sb-icon-search, .sb-search-submit{width:60px;height:35px;display:block;position:absolute;right:0;top:0;padding:0 20px;margin:0;line-height:35px;text-align:center;cursor:pointer;}
 .sb-search-submit{background:#fff;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);opacity:0;color:transparent;color:red;border:none;outline:none;z-index:-1;}
-.sb-icon-search{color:#fff;background:#ac0f0a;z-index:90;font-size:18px;font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;}
+.sb-icon-search{color:#fff;background:#0d5dab;z-index:90;font-size:18px;font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;}
 .sb-icon-search:before{content:"";}
 .sb-search.sb-search-open{overflow:visible;}
 .sb-search.sb-search-open,
 .no-js .sb-search{width:100%;}
 .sb-search.sb-search-open .sb-icon-search,
-.no-js .sb-search .sb-icon-search{background:#b30f0f;color:#f1f1f1;z-index:11;}
+.no-js .sb-search .sb-icon-search{background:#0d5dab;color:#f1f1f1;z-index:11;}
 .sb-search.sb-search-open .sb-search-submit,
 .no-js .sb-search .sb-search-submit{}
 #unicode_font{width:200px;position:absolute;left:-200px;top:0;height:35px;background:#000;color:#fff;z-index:1;padding:6px;opacity:0;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
 .sb-search.sb-search-open #unicode_font{width:25%;left:-25%;opacity:1;display:none;}
-#sa{color:white;border:1px solid #ac0f0a;border-left:none;border-radius:0;position:absolute;right:20px;background:#ac0f0a;z-index:1000000;padding:6px 15px;height:35px;visibility:hidden;font-size:14px;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+#sa{color:white;border:1px solid #0d5dab;border-left:none;border-radius:0;position:absolute;right:20px;background:#0d5dab;z-index:1000000;padding:6px 15px;height:35px;visibility:hidden;font-size:14px;-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
 #sa:hover{background:#000;visibility:visible!important;}
 .sb-search.sb-search-open #sa{visibility:visible!important;}
 #menu {display: block;}
@@ -918,9 +918,9 @@ input[type="search"].sb-search-input{-webkit-appearance:none;-webkit-border-radi
 #menu .navbar-nav .dropdown.open .dropdown-toggle i{transform:rotate(180deg);}
 #menu .btn:hover, #menu .btn:hover{background:transparent;color:#000;}
 #menu .mega-dropdown-menu{}
-#menu .navbar-nav .dropdown.open > a, #menu .navbar-nav li > a:hover{background:#9a1515;color:#fff;}
+#menu .navbar-nav .dropdown.open > a, #menu .navbar-nav li > a:hover{background:#f16521;color:#fff;}
 #menu .navbar-nav .mega-dropdown-menu a:hover{background:transparent;color:#439ec9;}
-#menu .navbar-nav li.active a{background:#ac0f0a;color:#fff!important;}
+#menu .navbar-nav li.active a{background:#0d5dab;color:#fff!important;}
 .mega-dropdown-menu{padding:0;width:100%;border-radius:0;border-top:1px solid #eee;}
 #menu .mega-dropdown-menu ul{border-right:1px solid #eee;list-style:none;margin:0;padding:0;}
 #menu .mega-dropdown-menu ul.media{border-right:none;}

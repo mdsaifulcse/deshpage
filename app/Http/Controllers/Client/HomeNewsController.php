@@ -23,8 +23,6 @@ class HomeNewsController extends Controller
 //            ->orderBy('id','DESC');
 
         $newses=new News;
-        //$newses=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED);
-
 
         $coverNews=[];
 
@@ -36,31 +34,31 @@ class HomeNewsController extends Controller
 
         $educations=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','education')->take(4)->get();
+            ->categoryNews('newsCategory','categories','link','property-rental')->take(4)->get();
 
         $technologies=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','technology')->take(9)->get();
+            ->categoryNews('newsCategory','categories','link','taxi-uber-rental')->take(9)->get();
 
         $entertainments=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
-            ->categoryNews('newsCategory','categories','link','entertainment')->take(4)->get();
+            ->categoryNews('newsCategory','categories','link','sale')->take(4)->get();
 
         $healths=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','health')->take(6)->get();
+            ->categoryNews('newsCategory','categories','link','jobs')->take(6)->get();
 
         $probashs=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','lifestyle')->take(6)->get();
+            ->categoryNews('newsCategory','categories','link','training-services')->take(6)->get();
 
 
         $literatures=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','shahitto ')->take(6)->get();
+            ->categoryNews('newsCategory','categories','link','sale')->take(6)->get();
 
         $interviews=$newses->with('newsCategory','newsSubCategory')->where('published_status',News::PUBLISHED)
             ->where('published_status',News::PUBLISHED)->orderBy('id','DESC')
-            ->categoryNews('newsCategory','categories','link','interview')->take(6)->get();
+            ->categoryNews('newsCategory','categories','link','events')->take(6)->get();
 
         $mostReadNews=$newses->with('newsCategory','newsSubCategory','mostReadNews')
                     ->whereHas('mostReadNews',function ($q){

@@ -17,7 +17,7 @@
                 $dropDown='';
                 $dropDownToggle='';
                 $dropDownIcon='';
-
+                $dropDownMenu='';
 
                 if (count($menuData->subCatAsSubMenu)>0){
                     $dropDown='dropdown';
@@ -48,7 +48,7 @@
             </li>
             @empty
 
-                <li><a href="javascript:;"> কোন মেনু ডেটা পাওয়া যায়নি! !</a></li>
+                <li><a href="javascript:;">No Record Found !</a></li>
 
             @endforelse
 
@@ -73,7 +73,7 @@
         <span class="search" onclick="openSearch()"></span>
         <form id="searchBox" action="{{url('/search')}}" method="get">
             <label for="q"></label>
-            <input type="text" name="user_play"  inputmode="search" placeholder="অনুসন্ধান... " autofocus>
+            <input type="text" name="user_play"  inputmode="search" placeholder="Search... " autofocus>
             <span onclick="closeSearch()">&times;</span>
         </form>
     </div>
@@ -109,7 +109,7 @@
                         <li><a href="{{$social->link}}" target="_blank" title="Facebook" rel="nofollow"><i class="{{$social->icon_class}}"></i></a></li>
 
                             @empty
-                            <li><a href="javascript:;" title="Nothing" rel="nofollow">কোন ডেটা পাওয়া যায়নি!</a></li>
+                            <li><a href="javascript:;" title="Nothing" rel="nofollow">No Record Found !</a></li>
                         @endforelse
                     </ul>
                 </div>
@@ -137,7 +137,7 @@
                             {{--<input type="hidden" name="cof" value="FORID:10" />--}}
                             {{--<input type="hidden" name="ie" value="utf-8">--}}
                             <div>
-                                <input class="sb-search-input srch_submit" onkeyup="buttonUp();" onblur="monkey();" type="text" placeholder="অনুসন্ধান" name="user_play" id="q" required>
+                                <input class="sb-search-input srch_submit" onkeyup="buttonUp();" onblur="monkey();" type="text" placeholder="Search" name="user_play" id="q" required>
                                 <button type="submit" id="sa" ><i class="fa fa-search"></i></button>
                                 <span class="sb-icon-search"><i class="fa fa-search"></i></span>
                             </div>
@@ -195,13 +195,13 @@
 
                     @empty
 
-                        <li><a href="javascript:;"> কোন মেনু ডেটা পাওয়া যায়নি! !</a></li>
+                        <li><a href="javascript:;">No Record Found !</a></li>
 
                     @endforelse
 
 
                     <li class="dropdown mega-dropdown" id="menu-dropdown">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">সকল বিভাগ <i class="fa fa-angle-down"></i></a>
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">Other Services <i class="fa fa-angle-down"></i></a>
                         <div class="dropdown-menu mega-dropdown-menu" style="max-height:300px;overflow: auto;">
                             <div class="container">
                                 <div class="row">
@@ -225,7 +225,7 @@
 
                                     <div class="col-sm-3">
                                         <ul class="media">
-                                            <li><a href="javascript:;">কোন মেনু ডেটা পাওয়া যায়নি!</a></li>
+                                            <li><a href="javascript:;">No Record Found !</a></li>
 
                                         </ul>
                                     </div>

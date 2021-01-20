@@ -67,8 +67,7 @@
             <div class="col-sm-12 text-center paddingTopBottom10 advertisement">
 
                 <div id='topA'>
-                    <a id="topA" target="_blank" href="{{$topA->target_url}}" onfocus="ss('topA')" onmousedown="st('topA')"
-                       onmouseover="ss('topA')" onclick="ha('topA')"><img src="{{asset($topA->image)}}"/> </a>
+                    <a id="topA" target="_blank" href="{{$topA->target_url}}"  onclick="ha('topA')"><img src="{{asset($topA->image)}}"/> </a>
                 </div>
 
                 {{--<span>{{$_SERVER['HTTP_USER_AGENT']}}</span>--}}
@@ -144,6 +143,20 @@ if(stristr("$requestDevice", "Mobile") || stristr("$requestDevice", "Tablet") ||
 }
 ?>
 <!-- for mobile end -->
+
+<script>
+    jQuery(function($){
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
+
+        $(window).resize(function() {
+            if(windowWidth != $(window).width() || windowHeight != $(window).height()) {
+                location.reload();
+                return;
+            }
+        });
+    });
+</script>
 
 
 @yield('script')

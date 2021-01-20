@@ -1,7 +1,7 @@
 @extends('layouts.vmsapp')
 
 @section('title')
-Edit News Info
+Edit classified Info
 @endsection
 
 @section('style')
@@ -15,13 +15,13 @@ Edit News Info
 <!-- begin:: Content Head -->
 
 @section('subheader')
-	Edit News Info
+	Edit classified Info
 @endsection
 
 @section('subheader-action')
     @can('news-list')
         <a href="{{ route('news.index') }}" class="btn btn-success pull-right">
-           Go News list
+           Go classified list
         </a>
     @endcan
 @endsection
@@ -50,7 +50,7 @@ Edit News Info
 										<div class="kt-portlet__head form-header">
 											<div class="kt-portlet__head-label">
 												<h3 class="kt-portlet__head-title">
-													Update News Information
+													Update Classified Information
 												</h3>
 											</div>
 										</div>
@@ -62,7 +62,7 @@ Edit News Info
 													<div class="form-group col-md-7">
 														<label for="example-text-input" class="col-form-label">Title<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::text('title', $value=old('title',$news->title), array('placeholder' => 'News Title Here *','class' => 'form-control','required'=>true)) !!}
+															{!! Form::text('title', $value=old('title',$news->title), array('placeholder' => 'Classified Title Here *','class' => 'form-control','required'=>true)) !!}
 
 															@if ($errors->has('title'))
 																<span class="help-block">
@@ -75,7 +75,7 @@ Edit News Info
 													<div class="form-group col-md-3">
 														<label for="example-text-input" class="col-form-label">Topic<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::text('topic[]', $value=old('topic',$news->topic), ['id'=>'topicField','placeholder' => 'News Topic Here *','class' => 'form-control','required'=>false,'style'=>'display:none',]) !!}
+															{!! Form::text('topic[]', $value=old('topic',$news->topic), ['id'=>'topicField','placeholder' => 'Classified Topic Here *','class' => 'form-control','required'=>false,'style'=>'display:none',]) !!}
 
 															<ul id="topicFieldUl"></ul>
 
@@ -105,9 +105,9 @@ Edit News Info
 
 												<div class="row">
 													<div class="form-group col-md-10">
-														<label for="example-text-input" class="col-form-label">News Meta Details<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Meta Details<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::textArea('meta_description', $value=old('meta_description',$news->meta_description), ['rows'=>3,'placeholder' => 'News Meta Details Here ','class' => 'form-control ','required'=>true]) !!}
+															{!! Form::textArea('meta_description', $value=old('meta_description',$news->meta_description), ['rows'=>3,'placeholder' => 'Classified Meta Details Here ','class' => 'form-control ','required'=>true]) !!}
 
 
 															@if ($errors->has('meta_description'))
@@ -123,9 +123,9 @@ Edit News Info
 												</div><!-- end row -->
 												<div class="row">
 													<div class="form-group col-md-10">
-														<label for="example-text-input" class="col-form-label">News Details<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Details<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::textArea('description', $value=old('description',$news->description), ['rows'=>8,'placeholder' => 'News Details Here ','class' => 'form-control textarea','required'=>false]) !!}
+															{!! Form::textArea('description', $value=old('description',$news->description), ['rows'=>8,'placeholder' => 'Classified Details Here ','class' => 'form-control textarea','required'=>false]) !!}
 
 
 															<strong class="text-default pull-right description-error"><span id="character_count">0</span> /5000 </strong>
@@ -206,10 +206,10 @@ Edit News Info
 														</div>
 													</div>
 
-													<div class="form-group col-md-2">
-														<label for="example-text-input" class="col-form-label">Is Cover News?<sup class="text-danger">*</sup></label>
+													<div class="form-group col-md-2" style="display: none;">
+														<label for="example-text-input" class="col-form-label">Is Cover Classified?<sup class="text-danger">*</sup></label>
 														<div class="">
-															{!! Form::select('is_cover_news', [\App\Models\News::YES=>\App\Models\News::YES,\App\Models\News::NO=>\App\Models\News::NO],$news->is_cover_news, ['placeholder' => 'Select One *','class' => 'form-control','required'=>true]) !!}
+															{!! Form::select('is_cover_news', [\App\Models\News::YES=>\App\Models\News::YES,\App\Models\News::NO=>\App\Models\News::NO],$news->is_cover_news, ['class' => 'form-control','required'=>true]) !!}
 
 															@if ($errors->has('is_cover_news'))
 																<span class="help-block">
@@ -225,7 +225,7 @@ Edit News Info
 												<div class="row">
 
 													<div class="form-group col-md-3">
-														<label for="example-text-input" class="col-form-label">News Author<sup class="text-danger">*</sup></label>
+														<label for="example-text-input" class="col-form-label">Classified Author<sup class="text-danger">*</sup></label>
 														<div class="">
 															{!! Form::select('news_author_id',$newsAuthors,$news->news_author_id, ['placeholder' => 'Select Author *','class' => 'form-control','required'=>true]) !!}
 
@@ -385,7 +385,7 @@ Edit News Info
                 singleFieldNode: $('#topicField'),
                 allowSpaces: true,
                 tagLimit:5,
-                placeholderText:'Enter News Topics (Max 3)',
+                placeholderText:'Enter Classified Topics (Max 3)',
             });
         });
 	</script>

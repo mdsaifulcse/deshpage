@@ -139,7 +139,7 @@ class CategoryNewsController extends Controller
                     </div>";
                 } // end foreach
             }else{
-                $output.='<h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>';
+                $output.='<h4 class="text-danger text-center">No Record Found !</h4>';
             }
             return $output;
         }
@@ -226,7 +226,7 @@ class CategoryNewsController extends Controller
                     } // end foreach
 
                 }else{
-                    $result.='<h4 class="text-danger text-center">কোন ফলাফল পাওয়া যায়নি</h4>';
+                    $result.='<h4 class="text-danger text-center">No Record Found !</h4>';
                 }
                 return $result;
 

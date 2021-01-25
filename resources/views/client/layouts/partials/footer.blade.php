@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-7">
                     <p class="small">
-                        <span> <br>&copy; {{\MyHelper::bn_number($setting->copyright)}} All Right Reserved | {{\App\Models\Setting::first()->value('company_name')}}</span><br>
+                        <span> <br>&copy; {{$setting->copyright}} All Right Reserved | {{\App\Models\Setting::first()->value('company_name')}}</span><br>
                         <i class="fa fa-map-marker"></i> {{$setting->address1}}
                         <br>
                         <abbr title="Phone:"><i class="fa fa-phone"></i> </abbr> {{$setting->mobile_no1}} ,
@@ -20,11 +20,12 @@
                         {{$setting->email1}},
                         {{$setting->email2}}<br>
 </span>
+                        <span> <a href="http://deshpage.com">deshpage.com</a> is a sister concern of Eastwest Technologies Inc. </span>
                     </p>
                 </div>
                 <div class="col-sm-5 footer-top hidden-print">
                     <ul class="footer-menu text-right">
-                        <li class="paddingBottom10"><a href="{{url('/about-us.html')}}">About Us</a></li>
+                        {{--<li class="paddingBottom10"><a href="{{url('/about-us.html')}}">About Us</a></li>--}}
                         <li class="paddingBottom10"><a href="{{url('/contact.htm')}}">Contact us </a></li>
                         <li class="paddingBottom10"><a href="{{url('/page/privacy-policy')}}" target="_blank">Privacy Policy</a></li>
                     </ul>

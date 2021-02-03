@@ -17,7 +17,7 @@ class CreateMostReadNewsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('news_id',false,20);
             $table->unsignedBigInteger('category_id',false,20);
-            $table->tinyInteger('read_number');
+            $table->integer('read_number',false,10);
             $table->timestamps();
         });
     }
